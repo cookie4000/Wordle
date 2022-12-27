@@ -64,7 +64,7 @@ def pickWord():
     # Pick a 5 letter word from the possible answers
     wordleDict = dfPossibleAnswers[dfPossibleAnswers['word'].str.len()==5] 
     wordArr = wordleDict['word'].to_numpy()
-    max = wordArr.size
+    max = wordArr.size -1
     rand = randint(1, max)
     selectedWord = wordArr[rand]
     return selectedWord
