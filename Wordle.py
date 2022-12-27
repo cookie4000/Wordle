@@ -6,12 +6,12 @@ from rich.console import Console
 NO_OF_GUESSES = 6
 
 # Import the total word list
-dfWordList = pd.read_csv("data/WordList.txt")
+dfWordList = pd.read_csv("data/WordList.txt",header=None)
 dfWordList.columns = ['word']
 dfWordList['word'] = dfWordList['word'].str.upper()
 
 # Import the Possible answer list
-dfPossibleAnswers = pd.read_csv("data/PossibleAnswers.txt")
+dfPossibleAnswers = pd.read_csv("data/PossibleAnswers.txt",header=None)
 dfPossibleAnswers.columns = ['word']
 dfPossibleAnswers['word'] = dfPossibleAnswers['word'].str.upper()
 
